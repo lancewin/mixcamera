@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mix Camera · Support &amp; Legal</title>
+<link rel="alternate" hreflang="zh-Hans" href="index_zh.html">
+<link rel="alternate" hreflang="en" href="index_en.html">
+<style>
+:root { color-scheme: light dark; --accent:#007AFF; --line:rgba(60,60,67,.13);
+        --muted:#8E8E93; --body:#3C3C43; }
+* { box-sizing:border-box; }
+/* 页面底色**显式声明**：App 内置时 WKWebView 底下是 App 的灰底，
+   不显式给底色会出现"网页版白底 / App 内灰底"的可见差异 */
+html { background:Canvas; }
+body { margin:0 auto; padding:0 18px 72px; max-width:760px;
+  font:16px/1.75 -apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",sans-serif;
+  -webkit-font-smoothing:antialiased; }
+a { color:var(--accent); }
+header.top { display:flex; align-items:center; justify-content:space-between;
+  gap:12px; padding:18px 0 14px; border-bottom:.5px solid var(--line); margin-bottom:28px;
+  position:sticky; top:0; background:Canvas; z-index:5; }
+.brand { font-weight:600; text-decoration:none; color:inherit; font-size:15px; }
+.lang { display:flex; gap:2px; background:rgba(120,120,128,.12); border-radius:8px; padding:2px; }
+.lang a { font-size:13px; padding:4px 11px; border-radius:6px; text-decoration:none; color:inherit; }
+.lang a.on { background:Canvas; font-weight:600; box-shadow:0 1px 3px rgba(0,0,0,.12); }
+h1 { font-size:26px; line-height:1.3; margin:0 0 6px; letter-spacing:-.01em; }
+.meta { color:var(--muted); font-size:13px; margin:0 0 20px; }
+p { margin:10px 0; color:var(--body); }
+.lead { padding:14px 16px; background:rgba(0,122,255,.08); border-radius:10px;
+  color:var(--body); margin:0 0 28px; }
+.toc { background:rgba(120,120,128,.07); border-radius:10px; padding:14px 18px; margin:0 0 32px; }
+.toc-title { font-size:13px; font-weight:600; color:var(--muted); margin:0 0 8px; }
+/* 目录用无序号列表：章节标题本身已带「一、」/「1.」，再加 ol 编号会双重编号 */
+.toc ul { margin:0; padding:0; list-style:none; }
+.toc li { font-size:14px; margin:5px 0; }
+.toc a { text-decoration:none; }
+.toc a:hover { text-decoration:underline; }
+h2 { font-size:17px; margin:34px 0 8px; scroll-margin-top:72px; }
+h2:first-of-type { margin-top:0; }
+.card { padding-bottom:4px; }
+footer { margin-top:52px; padding-top:18px; border-top:.5px solid var(--line);
+  color:var(--muted); font-size:13px; }
+footer a { color:var(--muted); }
+.choices { display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); margin:24px 0 8px; }
+.choice { display:block; padding:18px 20px; border:.5px solid var(--line); border-radius:12px;
+  text-decoration:none; color:inherit; }
+.choice:hover { border-color:var(--accent); }
+.choice .t { font-size:17px; font-weight:600; margin-bottom:4px; }
+.choice .d { font-size:13px; color:var(--muted); }
+.links { list-style:none; padding:0; margin:8px 0 0; }
+.links li { margin:6px 0; }
+.docs { margin-top:8px; }
+.faq { padding:16px 0; border-bottom:.5px solid var(--line); }
+.faq:last-child { border-bottom:0; }
+.faq h3 { font-size:15px; margin:0 0 6px; }
+.faq p { margin:0; }
+.contact { padding:16px 18px; background:rgba(0,122,255,.08); border-radius:10px; margin:24px 0 0; }
+strong { color:CanvasText; font-weight:600; }
+@media (prefers-color-scheme: dark) { :root { --body:#D1D1D6; --line:rgba(255,255,255,.14); } }
+@media print { header.top { position:static; } .lang,.toc { display:none; } body { max-width:none; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index_en.html">Mix Camera</a>
+  <nav class="lang">
+    <a class="" href="index_zh.html">中文</a>
+    <a class="on" href="index_en.html">English</a>
+  </nav>
+</header>
+<main>
+<h1>Support &amp; Legal</h1>
+<p class="meta">One camera, eleven tools: photo · video · ID photo · document scan · watermark · mosaic · GIF…</p>
+<p class="lead">This is the support and legal entry point for the app. All image processing runs on your device — nothing leaves it.</p>
+<div class="choices"><a class="choice" href="support_en.html"><div class="t">Support &amp; FAQ</div><div class="d">Start here — most issues are answered in the FAQ</div></a></div>
+<h2>Legal</h2>
+<div class="choices"><a class="choice" href="privacy_en.html"><div class="t">Privacy Policy</div><div class="d">What we collect, what we don't, how permissions are used</div></a><a class="choice" href="terms_en.html"><div class="t">Terms of Service</div><div class="d">Free features, subscriptions, cancellation, content ownership</div></a></div>
+<h2>中文</h2>
+<div class="choices"><a class="choice" href="index_zh.html"><div class="t">中文版</div><div class="d">支持与条款（简体中文）</div></a></div>
+<p style="margin-top:32px;color:var(--muted);font-size:13px">
+  Last updated: 2026-09-23</p>
+</main>
+<footer>Mix Camera · Contact <a href="mailto:lancewin@foxmail.com">lancewin@foxmail.com</a></footer>
+</body>
+</html>

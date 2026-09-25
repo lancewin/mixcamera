@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>用户服务协议 · 全能超级相机</title>
+<link rel="alternate" hreflang="zh-Hans" href="terms_zh.html">
+<link rel="alternate" hreflang="en" href="terms_en.html">
+<style>
+:root { color-scheme: light dark; --accent:#007AFF; --line:rgba(60,60,67,.13);
+        --muted:#8E8E93; --body:#3C3C43; }
+* { box-sizing:border-box; }
+/* 页面底色**显式声明**：App 内置时 WKWebView 底下是 App 的灰底，
+   不显式给底色会出现"网页版白底 / App 内灰底"的可见差异 */
+html { background:Canvas; }
+body { margin:0 auto; padding:0 18px 72px; max-width:760px;
+  font:16px/1.75 -apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",sans-serif;
+  -webkit-font-smoothing:antialiased; }
+a { color:var(--accent); }
+header.top { display:flex; align-items:center; justify-content:space-between;
+  gap:12px; padding:18px 0 14px; border-bottom:.5px solid var(--line); margin-bottom:28px;
+  position:sticky; top:0; background:Canvas; z-index:5; }
+.brand { font-weight:600; text-decoration:none; color:inherit; font-size:15px; }
+.lang { display:flex; gap:2px; background:rgba(120,120,128,.12); border-radius:8px; padding:2px; }
+.lang a { font-size:13px; padding:4px 11px; border-radius:6px; text-decoration:none; color:inherit; }
+.lang a.on { background:Canvas; font-weight:600; box-shadow:0 1px 3px rgba(0,0,0,.12); }
+h1 { font-size:26px; line-height:1.3; margin:0 0 6px; letter-spacing:-.01em; }
+.meta { color:var(--muted); font-size:13px; margin:0 0 20px; }
+p { margin:10px 0; color:var(--body); }
+.lead { padding:14px 16px; background:rgba(0,122,255,.08); border-radius:10px;
+  color:var(--body); margin:0 0 28px; }
+.toc { background:rgba(120,120,128,.07); border-radius:10px; padding:14px 18px; margin:0 0 32px; }
+.toc-title { font-size:13px; font-weight:600; color:var(--muted); margin:0 0 8px; }
+/* 目录用无序号列表：章节标题本身已带「一、」/「1.」，再加 ol 编号会双重编号 */
+.toc ul { margin:0; padding:0; list-style:none; }
+.toc li { font-size:14px; margin:5px 0; }
+.toc a { text-decoration:none; }
+.toc a:hover { text-decoration:underline; }
+h2 { font-size:17px; margin:34px 0 8px; scroll-margin-top:72px; }
+h2:first-of-type { margin-top:0; }
+.card { padding-bottom:4px; }
+footer { margin-top:52px; padding-top:18px; border-top:.5px solid var(--line);
+  color:var(--muted); font-size:13px; }
+footer a { color:var(--muted); }
+.choices { display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); margin:24px 0 8px; }
+.choice { display:block; padding:18px 20px; border:.5px solid var(--line); border-radius:12px;
+  text-decoration:none; color:inherit; }
+.choice:hover { border-color:var(--accent); }
+.choice .t { font-size:17px; font-weight:600; margin-bottom:4px; }
+.choice .d { font-size:13px; color:var(--muted); }
+.links { list-style:none; padding:0; margin:8px 0 0; }
+.links li { margin:6px 0; }
+.docs { margin-top:8px; }
+.faq { padding:16px 0; border-bottom:.5px solid var(--line); }
+.faq:last-child { border-bottom:0; }
+.faq h3 { font-size:15px; margin:0 0 6px; }
+.faq p { margin:0; }
+.contact { padding:16px 18px; background:rgba(0,122,255,.08); border-radius:10px; margin:24px 0 0; }
+strong { color:CanvasText; font-weight:600; }
+@media (prefers-color-scheme: dark) { :root { --body:#D1D1D6; --line:rgba(255,255,255,.14); } }
+@media print { header.top { position:static; } .lang,.toc { display:none; } body { max-width:none; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index_zh.html">全能超级相机</a>
+  <nav class="lang">
+    <a class="on" href="terms_zh.html">中文</a>
+    <a class="" href="terms_en.html">English</a>
+  </nav>
+</header>
+<main>
+<h1>全能超级相机 用户服务协议</h1>
+<p class="meta">更新日期：2026-09-23</p>
+<p class="lead">一句话：这是一款装在你手机里的工具，你拍的内容归你；免费功能永久免费，付费项的价格、周期与取消方式都在下面写清楚了。</p>
+<nav class="toc"><p class="toc-title">本页目录</p><ul><li><a href="#s1">一、协议范围</a></li><li><a href="#s2">二、服务内容</a></li><li><a href="#s3">三、费用与订阅</a></li><li><a href="#s4">四、你的内容归你</a></li><li><a href="#s5">五、使用规范</a></li><li><a href="#s6">六、知识产权</a></li><li><a href="#s7">七、免责与责任限制</a></li><li><a href="#s8">八、协议变更与终止</a></li><li><a href="#s9">九、联系我们</a></li></ul></nav>
+<div class="card"><h2 id="s1">一、协议范围</h2><p>本协议是你与全能超级相机开发者（以下称「我们」）之间就使用全能超级相机 App（以下称「本 App」）达成的约定。下载、安装或使用本 App，即表示你已阅读并同意本协议。</p><p>若你不同意本协议的任何内容，请停止使用并卸载本 App。</p></div><div class="card"><h2 id="s2">二、服务内容</h2><p>本 App 提供拍照、录像、提词拍摄、文稿、证件照、文档扫描、双录、加水印、马赛克、转 GIF、合成等影像工具。</p><p>本 App 的主要处理过程在你的设备本地完成，不依赖我们的服务器；因此部分功能（如提词跟读识别）效果会受设备性能与环境影响。</p></div><div class="card"><h2 id="s3">三、费用与订阅</h2><p>免费功能：拍照、录像、文档扫描、提示词相机、文稿等基础能力永久免费，不设次数与时长限制。</p><p>周会员：按周自动续期订阅。<strong>具体价格以 App Store 结账页面展示为准</strong>（各国家 / 地区不同）—— 价格由 Apple 后台配置，可能调整，本协议不写死金额。确认购买后费用将从你的 Apple ID 账户扣除；订阅<strong>自动续期</strong>，除非在当前周期结束前至少 24 小时<strong>取消</strong>。可随时在系统「设置 → 你的 Apple ID → 订阅」中管理或取消。</p><p>Pro 永久版：一次买断，永久可用，不会自动续期。价格同样以 App Store 展示为准。</p><p>购买、续期与<strong>退款</strong>均由 Apple 处理：退款请通过 Apple 官方渠道申请，我们无法直接为你退款。换机或重装后，可在付费墙点「恢复购买」找回权益。</p></div><div class="card"><h2 id="s4">四、你的内容归你</h2><p>你通过本 App 拍摄、扫描、编辑的照片、视频与文稿，著作权与所有权均归你所有。</p><p>我们不会上传、不会收集、也无法访问你的这些内容。请自行做好备份：删除本 App 会同时删除保存在 App 内的文稿与扫描件（已存入系统相册的文件不受影响）。</p></div><div class="card"><h2 id="s5">五、使用规范</h2><p>你承诺不利用本 App 从事任何违反法律法规的活动，包括但不限于偷拍他人隐私、制作或传播违法有害信息、侵犯他人肖像权与著作权。</p><p>在水印、证件照等场景中使用他人姓名、证件或商标类信息，需事先取得合法授权；由你自行承担相应的法律责任。</p><p>不得对本 App 进行反向工程、破解、绕过付费校验，或以非官方渠道分发。</p></div><div class="card"><h2 id="s6">六、知识产权</h2><p>本 App 的界面、图标、文案、代码及相关素材的知识产权归我们或相应权利人所有。</p><p>在未获得书面许可前，你不得将其用于再发布、二次销售或制作衍生应用。</p></div><div class="card"><h2 id="s7">七、免责与责任限制</h2><p>本 App 按「现状」提供。我们尽力保证功能稳定，但不对因设备故障、系统升级、权限设置、存储空间不足或第三方原因造成的拍摄失败、文件损坏或内容丢失承担赔偿责任。</p><p>在法律允许的最大范围内，我们对你的累计责任不超过你在过去十二个月内为本 App 实际支付的费用。</p><p>请务必自行备份重要内容——这一点无论是否使用付费功能都成立。</p></div><div class="card"><h2 id="s8">八、协议变更与终止</h2><p>本 App 的功能与条款可能随版本更新调整；有重大变更时，我们会在 App 内以显著方式提示，继续使用即视为接受变更后的条款。</p><p>你可以随时停止使用并卸载本 App，本协议随之终止。</p></div><div class="card"><h2 id="s9">九、联系我们</h2><p>对本协议有任何疑问，或需要行使你的权利，请发送邮件至 <a href="mailto:lancewin@foxmail.com">lancewin@foxmail.com</a>，我们会在 15 个工作日内答复。</p></div>
+</main>
+<footer>全能超级相机 · 联系邮箱 <a href="mailto:lancewin@foxmail.com">lancewin@foxmail.com</a></footer>
+</body>
+</html>
