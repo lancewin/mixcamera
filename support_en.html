@@ -17,6 +17,9 @@ body { margin:0 auto; padding:0 18px 72px; max-width:760px;
   font:16px/1.75 -apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",sans-serif;
   -webkit-font-smoothing:antialiased; }
 a { color:var(--accent); }
+/* 联系方式（邮箱）**刻意压暗**：联系方式要"找得到"，但不是页面上最显眼的东西 ——
+   正文里的 `mailto()` 与支持页的「联系我们」都用这个类 */
+a.mail { color:var(--muted); }
 header.top { display:flex; align-items:center; justify-content:space-between;
   gap:12px; padding:18px 0 14px; border-bottom:.5px solid var(--line); margin-bottom:28px;
   position:sticky; top:0; background:Canvas; z-index:5; }
@@ -55,7 +58,6 @@ footer a { color:var(--muted); }
 .faq:last-child { border-bottom:0; }
 .faq h3 { font-size:15px; margin:0 0 6px; }
 .faq p { margin:0; }
-.contact { padding:16px 18px; background:rgba(0,122,255,.08); border-radius:10px; margin:24px 0 0; }
 strong { color:CanvasText; font-weight:600; }
 @media (prefers-color-scheme: dark) { :root { --body:#D1D1D6; --line:rgba(255,255,255,.14); } }
 @media print { header.top { position:static; } .lang,.toc { display:none; } body { max-width:none; } }
@@ -63,7 +65,7 @@ strong { color:CanvasText; font-weight:600; }
 </head>
 <body>
 <header class="top">
-  <a class="brand" href="index_en.html">Mix Camera</a>
+  <a class="brand" href="support_en.html">Mix Camera</a>
   <nav class="lang">
     <a class="" href="support_zh.html">中文</a>
     <a class="on" href="support_en.html">English</a>
@@ -74,13 +76,13 @@ strong { color:CanvasText; font-weight:600; }
 <p class="lead">This app has no account, no server, and collects no data, so "support" here mostly means helping you use the features correctly. All image processing runs on your device — we cannot see any of your files, so please send the <strong>symptom + device model + iOS version</strong> to the address below.</p>
 <nav class="toc"><p class="toc-title">Contents</p><ul><li><a href="#faq">FAQ</a></li><li><a href="#docs">Legal</a></li><li><a href="#contact">Contact</a></li></ul></nav>
 <h2 id="faq">FAQ</h2>
-<div class="faq"><h3>No sound in my videos?</h3><p>First allow the app to use the microphone in iOS Settings → Privacy &amp; Security → Microphone, and keep the mic switch at the top of the capture screen on. With the teleprompter camera, check that you did not tap mute by accident.</p></div><div class="faq"><h3>The watermark has no address, or the address is wrong?</h3><p>An address needs location permission and a network connection so iOS can resolve coordinates. If you picked Coordinates only in Me → Watermark Content, you will see coordinates instead of an address. Prefer not to use location? Switch to Custom Text and type it yourself.</p></div><div class="faq"><h3>Saved but cannot find it in Photos?</h3><p>Add Photos Only is enough — Full Access is not required. Files appear in Photos → Recents. Document scans export as PDF; find them in Works → Documents.</p></div><div class="faq"><h3>Follow-along cannot track where I am reading?</h3><p>Recognition runs entirely on-device. It works best in a quiet room, at normal volume, in Mandarin. If it keeps struggling, switch the mode to Voice-Follow or Constant — neither relies on speech recognition.</p></div><div class="faq"><h3>Is Pro still mine after switching phones or reinstalling?</h3><p>Yes. Pro is tied to your Apple ID — tap Restore Purchases on the paywall after switching or reinstalling. If you are on the weekly plan, make sure the subscription is still active.</p></div><div class="faq"><h3>How do I cancel my subscription?</h3><p>Cancel in iOS Settings → your Apple ID → Subscriptions, or tap Manage Subscription on the paywall. You keep access until the end of the current period. Cancelling mid-period is not refunded — refunds are handled by Apple.</p></div><div class="faq"><h3>How do I delete all my data?</h3><p>This app has no account and never uploads; photos and scripts live only on this device. Deleting the app removes all local data. You can also clear scratch files first in Me → Storage.</p></div>
+<div class="faq"><h3>No sound in my videos?</h3><p>First allow the app to use the microphone in iOS Settings → Privacy &amp; Security → Microphone, and keep the mic switch at the top of the capture screen on. With the teleprompter camera, check that you did not tap mute by accident.</p></div><div class="faq"><h3>The watermark has no address, or the address is wrong?</h3><p>An address needs location permission and a network connection so iOS can resolve coordinates. If you picked Coordinates only in Me → Watermark Content, you will see coordinates instead of an address. Prefer not to use location? Switch to Custom Text and type it yourself.</p></div><div class="faq"><h3>Saved but cannot find it in Photos?</h3><p>Add Photos Only is enough — Full Access is not required. Files appear in Photos → Recents. Document scans export as PDF; find them in Works → Documents.</p></div><div class="faq"><h3>Follow-along cannot track where I am reading?</h3><p>Recognition runs entirely on-device. It works best in a quiet room, at normal volume, in Mandarin. If it keeps struggling, switch the mode to Voice-Follow or Constant — neither relies on speech recognition.</p></div><div class="faq"><h3>Is Pro still mine after switching phones or reinstalling?</h3><p>Pro is tied to your Apple ID; after switching phones or reinstalling, tapping Restore Purchases on the paywall will usually bring it back. If you are on the weekly plan, check that the subscription is still active; if it still does not restore, tell us using the contact details on this page.</p></div><div class="faq"><h3>How do I cancel my subscription?</h3><p>Cancel in iOS Settings → your Apple ID → Subscriptions, or tap Manage Subscription on the paywall. You keep access until the end of the current period. Cancelling mid-period is not refunded — refunds are handled by Apple.</p></div><div class="faq"><h3>How do I delete all my data?</h3><p>The app requires no account and uploads nothing; photos and scripts live only on this device. Uninstalling the app also removes the local data inside it; files already saved to the system photo library must be deleted there.</p></div>
 <h2 id="docs">Legal</h2>
 <ul class="links docs"><li><a href="privacy_en.html">Privacy Policy</a></li><li><a href="terms_en.html">Terms of Service</a></li></ul>
-<h2 id="contact">Contact</h2>
-<div class="contact"><p>Email: <a href="mailto:lancewin@foxmail.com">lancewin@foxmail.com</a></p><p>We reply within 15 working days.</p></div>
 <p style="margin-top:20px;color:var(--muted);font-size:14px">Including your iOS version and device model makes troubleshooting much faster. Because everything runs on-device, we <strong>cannot see your photos, videos, or scripts</strong> — we rely on your description.</p>
+<h2 id="contact">Contact</h2>
+<p>Email: <a class="mail" href="mailto:lancewin@foxmail.com">lancewin@foxmail.com</a></p>
 </main>
-<footer>Mix Camera · Contact <a href="mailto:lancewin@foxmail.com">lancewin@foxmail.com</a></footer>
+<footer>Mix Camera</footer>
 </body>
 </html>

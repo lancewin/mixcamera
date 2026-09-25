@@ -17,6 +17,9 @@ body { margin:0 auto; padding:0 18px 72px; max-width:760px;
   font:16px/1.75 -apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",sans-serif;
   -webkit-font-smoothing:antialiased; }
 a { color:var(--accent); }
+/* 联系方式（邮箱）**刻意压暗**：联系方式要"找得到"，但不是页面上最显眼的东西 ——
+   正文里的 `mailto()` 与支持页的「联系我们」都用这个类 */
+a.mail { color:var(--muted); }
 header.top { display:flex; align-items:center; justify-content:space-between;
   gap:12px; padding:18px 0 14px; border-bottom:.5px solid var(--line); margin-bottom:28px;
   position:sticky; top:0; background:Canvas; z-index:5; }
@@ -55,7 +58,6 @@ footer a { color:var(--muted); }
 .faq:last-child { border-bottom:0; }
 .faq h3 { font-size:15px; margin:0 0 6px; }
 .faq p { margin:0; }
-.contact { padding:16px 18px; background:rgba(0,122,255,.08); border-radius:10px; margin:24px 0 0; }
 strong { color:CanvasText; font-weight:600; }
 @media (prefers-color-scheme: dark) { :root { --body:#D1D1D6; --line:rgba(255,255,255,.14); } }
 @media print { header.top { position:static; } .lang,.toc { display:none; } body { max-width:none; } }
@@ -63,7 +65,7 @@ strong { color:CanvasText; font-weight:600; }
 </head>
 <body>
 <header class="top">
-  <a class="brand" href="index_zh.html">全能超级相机</a>
+  <a class="brand" href="support_zh.html">全能超级相机</a>
   <nav class="lang">
     <a class="on" href="privacy_zh.html">中文</a>
     <a class="" href="privacy_en.html">English</a>
@@ -71,11 +73,11 @@ strong { color:CanvasText; font-weight:600; }
 </header>
 <main>
 <h1>全能超级相机 隐私政策</h1>
-<p class="meta">更新日期：2026-09-23</p>
-<p class="lead">一句话：不注册、不上传、无广告、无第三方统计 SDK。你的照片、视频、文稿只存在你自己的设备上；只有水印地址这一项需要联网。</p>
+<p class="meta">更新日期：2026-09-25</p>
+<p class="lead">一句话：不注册、不上传、无广告、无第三方统计 SDK。你的照片、视频、文稿只存在你自己的设备上；只有水印地址解析与条款页面加载这两项需要联网。</p>
 <nav class="toc"><p class="toc-title">本页目录</p><ul><li><a href="#s1">一、我们收集哪些信息</a></li><li><a href="#s2">二、照片与视频</a></li><li><a href="#s3">三、定位信息</a></li><li><a href="#s4">四、麦克风</a></li><li><a href="#s5">五、相机</a></li><li><a href="#s6">六、购买信息</a></li><li><a href="#s7">七、儿童隐私</a></li><li><a href="#s8">八、你的权利与数据删除</a></li><li><a href="#s9">九、本政策的变更</a></li><li><a href="#s10">十、联系我们</a></li></ul></nav>
-<div class="card"><h2 id="s1">一、我们收集哪些信息</h2><p><strong>不收集</strong>：本 App 不要求注册登录，不收集你的手机号、邮箱、通讯录、位置轨迹或设备标识用于画像分析。</p><p><strong>不接入</strong>：本 App 不含第三方广告 SDK，也不含用于用户行为分析的统计 SDK。</p><p>本 App 没有自有服务器，你的使用数据不会回传给我们。</p></div><div class="card"><h2 id="s2">二、照片与视频</h2><p>拍摄、扫描与所有影像加工（加水印、马赛克、转 GIF、合成等）<strong>全部在你的设备本机完成</strong>。</p><p>只有当你在 App 内点击保存时，成品才会写入系统<strong>相册</strong>。只授予「添加照片」权限即可，无需开放「完全访问」。</p><p>我们不会读取你相册中的其他内容；如果你在「作品」页选择某个素材进行加工，也只是在本机读取该素材。</p></div><div class="card"><h2 id="s3">三、定位信息</h2><p>拍摄页水印可显示拍摄地点。定位<strong>仅在你使用该功能时</strong>获取，且只用于生成水印文字，不会上传、不会留存历史轨迹。</p><p>把坐标解析成中文地址需要联网，此时会由 Apple 的地理编码服务处理该坐标（不包含任何身份信息）。你可以不接受：在「我的 → 水印内容」里改成「仅经纬度」或「自定义文字」，或直接关闭「显示地点」。</p><p>你也可以在系统设置中随时关闭本 App 的定位权限，此时水印将不显示地址（不影响拍摄等其他功能）。</p></div><div class="card"><h2 id="s4">四、麦克风</h2><p>录像收音与提词「跟读」识别需要访问麦克风。跟读识别在<strong>本机</strong>完成，音频不会离开设备、不会被录音上传。</p><p>提词「跟声」模式同样只在本机做音量检测；「匀速」模式不使用麦克风。</p></div><div class="card"><h2 id="s5">五、相机</h2><p>相机权限用于取景预览与成像，仅在你使用拍摄类功能时调用。</p><p>本 App 不会在后台调用摄像头。</p></div><div class="card"><h2 id="s6">六、购买信息</h2><p>付费通过 <strong>Apple</strong> 内购（StoreKit）完成，支付方式与卡号由 Apple 处理，我们既拿不到也不存储。</p><p>购买凭证的校验在你的设备本地完成，我们不会收到你的付款明细。</p></div><div class="card"><h2 id="s7">七、儿童隐私</h2><p>本 App 不面向儿童单独提供服务，也不会有意收集儿童的个人信息。</p><p>若监护人发现有相关问题，可通过下方邮箱联系我们处理。</p></div><div class="card"><h2 id="s8">八、你的权利与数据删除</h2><p>你的数据都在你自己的设备上，因此你可以随时自行控制：照片与 PDF 存于系统相册或 App 内「作品 → 文档」，可在其中直接删除。</p><p>卸载本 App 会删除全部本地数据（含 App 内的文稿与扫描归档）；系统相册中已保存的文件需你在相册中删除。</p><p>你可以在系统设置中随时撤回相机、麦克风、相册、定位权限，撤回后对应功能将不可用，其余功能不受影响。</p></div><div class="card"><h2 id="s9">九、本政策的变更</h2><p>若本政策有重要变更，我们会在 App 内以显著方式提示，并更新本文档顶部的更新日期。</p><p>继续使用本 App，即表示你接受更新后的隐私政策。</p></div><div class="card"><h2 id="s10">十、联系我们</h2><p>对本政策或你的个人信息有任何疑问，请发送邮件至 <a href="mailto:lancewin@foxmail.com">lancewin@foxmail.com</a>，我们会在 15 个工作日内答复。</p></div>
+<div class="card"><h2 id="s1">一、我们收集哪些信息</h2><p><strong>不收集</strong>：本 App 不要求注册登录，不收集你的手机号、邮箱、通讯录、位置轨迹或设备标识用于画像分析。</p><p><strong>不接入</strong>：本 App 不含第三方广告 SDK，也不含用于用户行为分析的统计 SDK。</p><p>本 App 没有自有服务器，你的使用数据不会回传给我们。</p></div><div class="card"><h2 id="s2">二、照片与视频</h2><p>拍摄、扫描与所有影像加工（加水印、马赛克、转 GIF、合成等）<strong>全部在你的设备本机完成</strong>。</p><p>只有当你在 App 内点击保存时，成品才会写入系统<strong>相册</strong>。只授予「添加照片」权限即可，无需开放「完全访问」。</p><p>我们不会读取你相册中的其他内容；如果你在「作品」页选择某个素材进行加工，也只是在本机读取该素材。</p></div><div class="card"><h2 id="s3">三、定位信息</h2><p>拍摄页水印可显示拍摄地点。定位<strong>仅在你使用该功能时</strong>获取，且只用于生成水印文字，不会上传、不会留存历史轨迹。</p><p>把坐标解析成中文地址需要联网，此时会由 Apple 的地理编码服务处理该坐标（不包含任何身份信息）。你可以不接受：在「我的 → 水印内容」里改成「仅经纬度」或「自定义文字」，或直接关闭「显示地点」。</p><p>你也可以在系统设置中随时关闭本 App 的定位权限，此时水印将不显示地址（不影响拍摄等其他功能）。</p></div><div class="card"><h2 id="s4">四、麦克风</h2><p>录像收音与提词「跟读」识别需要访问麦克风。跟读识别在<strong>本机</strong>完成，音频不上传。</p><p>提词「跟声」模式同样只在本机做音量检测；「匀速」模式不使用麦克风。</p></div><div class="card"><h2 id="s5">五、相机</h2><p>相机权限用于取景预览与成像，仅在你使用拍摄类功能时调用。</p><p>本 App 不会在后台调用摄像头。</p></div><div class="card"><h2 id="s6">六、购买信息</h2><p>付费通过 <strong>Apple</strong> 内购（StoreKit）完成，支付方式与卡号由 Apple 处理，我们既拿不到也不存储。</p><p>购买凭证的校验在你的设备本地完成，我们不会收到你的付款明细。</p></div><div class="card"><h2 id="s7">七、儿童隐私</h2><p>本 App 不面向儿童单独提供服务，也不会有意收集儿童的个人信息。</p><p>若监护人发现有相关问题，可通过下方邮箱联系我们处理。</p></div><div class="card"><h2 id="s8">八、你的权利与数据删除</h2><p>你的数据都在你自己的设备上，因此你可以随时自行控制：照片与 PDF 存于系统相册或 App 内「作品 → 文档」，可在其中直接删除。</p><p>卸载本 App 会删除全部本地数据（含 App 内的文稿与扫描归档）；系统相册中已保存的文件需你在相册中删除。</p><p>你可以在系统设置中随时撤回相机、麦克风、相册、定位权限，撤回后对应功能将不可用，其余功能不受影响。</p></div><div class="card"><h2 id="s9">九、本政策的变更</h2><p>若本政策有重要变更，会更新本文档顶部的更新日期，请以最新版本为准。</p><p>继续使用本 App，即表示你接受更新后的隐私政策。</p><p>本政策描述的是<strong>当前版本</strong>的处理方式，不构成对未来版本或长期一致性的承诺或保证。</p></div><div class="card"><h2 id="s10">十、联系我们</h2><p>对本政策或你的个人信息有任何疑问，或需要行使你的权利，请发送邮件至 <a class="mail" href="mailto:lancewin@foxmail.com">lancewin@foxmail.com</a>。</p></div>
 </main>
-<footer>全能超级相机 · 联系邮箱 <a href="mailto:lancewin@foxmail.com">lancewin@foxmail.com</a></footer>
+<footer>全能超级相机</footer>
 </body>
 </html>

@@ -17,6 +17,9 @@ body { margin:0 auto; padding:0 18px 72px; max-width:760px;
   font:16px/1.75 -apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",sans-serif;
   -webkit-font-smoothing:antialiased; }
 a { color:var(--accent); }
+/* 联系方式（邮箱）**刻意压暗**：联系方式要"找得到"，但不是页面上最显眼的东西 ——
+   正文里的 `mailto()` 与支持页的「联系我们」都用这个类 */
+a.mail { color:var(--muted); }
 header.top { display:flex; align-items:center; justify-content:space-between;
   gap:12px; padding:18px 0 14px; border-bottom:.5px solid var(--line); margin-bottom:28px;
   position:sticky; top:0; background:Canvas; z-index:5; }
@@ -55,7 +58,6 @@ footer a { color:var(--muted); }
 .faq:last-child { border-bottom:0; }
 .faq h3 { font-size:15px; margin:0 0 6px; }
 .faq p { margin:0; }
-.contact { padding:16px 18px; background:rgba(0,122,255,.08); border-radius:10px; margin:24px 0 0; }
 strong { color:CanvasText; font-weight:600; }
 @media (prefers-color-scheme: dark) { :root { --body:#D1D1D6; --line:rgba(255,255,255,.14); } }
 @media print { header.top { position:static; } .lang,.toc { display:none; } body { max-width:none; } }
@@ -63,7 +65,7 @@ strong { color:CanvasText; font-weight:600; }
 </head>
 <body>
 <header class="top">
-  <a class="brand" href="index_zh.html">全能超级相机</a>
+  <a class="brand" href="support_zh.html">全能超级相机</a>
   <nav class="lang">
     <a class="on" href="support_zh.html">中文</a>
     <a class="" href="support_en.html">English</a>
@@ -74,13 +76,13 @@ strong { color:CanvasText; font-weight:600; }
 <p class="lead">本 App 没有账号、没有服务器、不收集数据，所以「技术支持」主要是帮你把功能用对。影像处理全部在设备本机完成，我们无法查看你的任何文件 —— 遇到问题请把<strong>现象 + 机型 + 系统版本</strong>发到下面的邮箱。</p>
 <nav class="toc"><p class="toc-title">本页目录</p><ul><li><a href="#faq">常见问题</a></li><li><a href="#docs">条款</a></li><li><a href="#contact">联系我们</a></li></ul></nav>
 <h2 id="faq">常见问题</h2>
-<div class="faq"><h3>拍出来没有声音？</h3><p>先到系统「设置 → 隐私与安全性 → 麦克风」允许本 App 使用麦克风，拍摄页顶部的麦克风开关也不要关掉。提示词相机请留意是否误触了静音按钮。</p></div><div class="faq"><h3>水印上没有地址，或者地址不准？</h3><p>地址需要定位权限，并且需要联网让系统把坐标解析成中文地址。若在「我的 → 水印内容」里选了「仅经纬度」，显示的就是坐标而不是地址；不想用定位可以改成「自定义文字」手填。</p></div><div class="faq"><h3>保存后相册里找不到？</h3><p>相册权限只给「添加照片」就够用，不必开放「完全访问」。文件会出现在系统「照片 → 最近项目」；文档扫描导出的是 PDF，请到「作品 → 文档」里查看。</p></div><div class="faq"><h3>跟读提词识别不出我念到哪？</h3><p>识别全程在本机完成。安静环境、正常音量、普通话命中率最高。如果一直不顺，可在提词页把模式换成「跟声」或「匀速」——这两种不依赖语音识别。</p></div><div class="faq"><h3>换手机或重装后，Pro 还在吗？</h3><p>还在。Pro 绑定你的 Apple ID，换机或重装后到付费墙点「恢复购买」即可。若是「周会员」，请确认订阅仍在有效期内。</p></div><div class="faq"><h3>怎么取消订阅？</h3><p>在系统「设置 → 你的 Apple ID → 订阅」中取消，或从付费墙点「管理订阅」跳转。取消后当前周期结束前仍可使用；周期内取消不退款，退款由 Apple 处理。</p></div><div class="faq"><h3>怎么彻底删除我的数据？</h3><p>本 App 不注册、不上传，照片与文稿只存在这台设备上。卸载 App 即删除全部本地数据；也可以先在「我的 → 存储」里清掉中间缓存。</p></div>
+<div class="faq"><h3>拍出来没有声音？</h3><p>先到系统「设置 → 隐私与安全性 → 麦克风」允许本 App 使用麦克风，拍摄页顶部的麦克风开关也不要关掉。提示词相机请留意是否误触了静音按钮。</p></div><div class="faq"><h3>水印上没有地址，或者地址不准？</h3><p>地址需要定位权限，并且需要联网让系统把坐标解析成中文地址。若在「我的 → 水印内容」里选了「仅经纬度」，显示的就是坐标而不是地址；不想用定位可以改成「自定义文字」手填。</p></div><div class="faq"><h3>保存后相册里找不到？</h3><p>相册权限只给「添加照片」就够用，不必开放「完全访问」。文件会出现在系统「照片 → 最近项目」；文档扫描导出的是 PDF，请到「作品 → 文档」里查看。</p></div><div class="faq"><h3>跟读提词识别不出我念到哪？</h3><p>识别全程在本机完成。安静环境、正常音量、普通话命中率最高。如果一直不顺，可在提词页把模式换成「跟声」或「匀速」——这两种不依赖语音识别。</p></div><div class="faq"><h3>换手机或重装后，Pro 还在吗？</h3><p>Pro 权益与你的 Apple ID 关联，换机或重装后到付费墙点「恢复购买」通常可以找回。若是「周会员」，请确认订阅仍在有效期内；若仍未恢复，可通过本页联系方式反馈。</p></div><div class="faq"><h3>怎么取消订阅？</h3><p>在系统「设置 → 你的 Apple ID → 订阅」中取消，或从付费墙点「管理订阅」跳转。取消后当前周期结束前仍可使用；周期内取消不退款，退款由 Apple 处理。</p></div><div class="faq"><h3>怎么彻底删除我的数据？</h3><p>本 App 不注册、不上传，照片与文稿只存在这台设备上。卸载 App 会一并删除 App 内的本地数据；系统相册里已保存的文件需你在相册中删除。</p></div>
 <h2 id="docs">条款</h2>
 <ul class="links docs"><li><a href="privacy_zh.html">隐私政策</a></li><li><a href="terms_zh.html">用户服务协议</a></li></ul>
-<h2 id="contact">联系我们</h2>
-<div class="contact"><p>客服邮箱：<a href="mailto:lancewin@foxmail.com">lancewin@foxmail.com</a></p><p>我们会在 15 个工作日内答复。</p></div>
 <p style="margin-top:20px;color:var(--muted);font-size:14px">提出问题时若能附上「系统版本 + 机型」，排查会快很多。所有处理都在本机完成，因此我们<strong>看不到你的照片、视频或文稿</strong>，需要你描述现象。</p>
+<h2 id="contact">联系我们</h2>
+<p>客服邮箱：<a class="mail" href="mailto:lancewin@foxmail.com">lancewin@foxmail.com</a></p>
 </main>
-<footer>全能超级相机 · 联系邮箱 <a href="mailto:lancewin@foxmail.com">lancewin@foxmail.com</a></footer>
+<footer>全能超级相机</footer>
 </body>
 </html>
